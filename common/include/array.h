@@ -14,7 +14,7 @@ typedef struct {
     size_t length;
 } int64_array;
 
-int64_t int64_array_get(int64_array array, int64_t index);
+int64_t int64_array_get(int64_array array, size_t index) ;
 void print_array_memaddr(int64_t *array, size_t arraySize);
 void print_int64_array_memaddr(int64_array array);
 void print_array_values(int64_t *array, size_t arraySize);

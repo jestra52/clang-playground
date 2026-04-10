@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 #include "array.h"
+#include "relativity.h"
 
 #define SIZE_OF_DS 2
 #define SIZE_OF_ARRAY_01 4
@@ -41,5 +42,14 @@ int main() {
     free(array02.items);
     array02.items = NULL;
 
-	return 0;	
+    double earth_gravity = newton_general_gravity_equation(5.97219e24, 1, 6371000);
+    printf("earth_gravity: %f\n\n", earth_gravity);
+
+    double sun_gravity = newton_general_gravity_equation(1.989e30, 1, 6.96e8);
+    printf("sun_gravity: %f\n\n", sun_gravity);
+
+    double sagittariusa_gravity = newton_general_gravity_equation(8.55e36, 1, 1.27e10);
+    printf("sagittariusa_gravity: %f\n\n", sagittariusa_gravity);
+
+	return 0;
 }
