@@ -1,6 +1,7 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-#include "../include/array.h"
+#include "array.h"
 
 int64_t int64_array_get(int64_array array, size_t index) {
     if (index < array.length) {
@@ -8,6 +9,15 @@ int64_t int64_array_get(int64_array array, size_t index) {
     }
 
     return 0;
+}
+
+int64_array create_int64_array(size_t size) {
+    int64_array arr;
+
+    arr.items = malloc(size * sizeof(int64_t));
+    arr.length = size;
+
+    return arr;
 }
 
 void print_array_memaddr(int64_t *array, size_t arraySize) {

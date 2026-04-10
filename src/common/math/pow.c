@@ -1,4 +1,4 @@
-#include "../include/pow.h"
+#include "pow.h"
 
 int64_t pow_int64(int64_t base, int64_t exp) {
     if (exp < 0) {
